@@ -24,8 +24,8 @@ public class DogParkDaoImpl implements DogParkDAO {
 
 	@Override
 	public List<DogPark> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		String jpql = "SELECT park FROM DogPark park";
+		return em.createQuery(jpql, DogPark.class).getResultList();
 	}
 
 	@Override
