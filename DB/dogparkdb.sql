@@ -25,6 +25,12 @@ CREATE TABLE IF NOT EXISTS `dog_park` (
   `name` VARCHAR(150) NOT NULL,
   `description` TEXT NULL,
   `image_url` VARCHAR(2000) NULL,
+  `street` VARCHAR(100) NULL,
+  `city` VARCHAR(45) NULL,
+  `state` VARCHAR(45) NULL,
+  `zip` VARCHAR(45) NULL,
+  `create_date` DATETIME NULL,
+  `last_update` DATETIME NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -44,7 +50,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `dogparkdb`;
-INSERT INTO `dog_park` (`id`, `name`, `description`, `image_url`) VALUES (1, 'Barnum Dog Park', NULL, NULL);
+INSERT INTO `dog_park` (`id`, `name`, `description`, `image_url`, `street`, `city`, `state`, `zip`, `create_date`, `last_update`) VALUES (1, 'Barnum Dog Park', '', 'https://offeromt.azureedge.net/adoptable-item-type-profile-photos/1cbb062f-3d5f-4a08-9189-75b7b8fc5597_160x160.jpg', NULL, NULL, NULL, NULL, '2024-06-06', '2024-08-01');
+INSERT INTO `dog_park` (`id`, `name`, `description`, `image_url`, `street`, `city`, `state`, `zip`, `create_date`, `last_update`) VALUES (2, 'Railyard Dog Park', '', '', NULL, NULL, NULL, NULL, NULL, NULL);
 
 COMMIT;
 

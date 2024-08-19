@@ -1,5 +1,7 @@
 package com.skilldistillery.dogparks.entities;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +21,11 @@ public class DogPark {
 	private String description;
 	@Column(name = "image_url")
 	private String imageUrl;
+	
+	@Column(name = "create_date")
+	private LocalDateTime createDate;
+	@Column(name = "last_update")
+	private LocalDateTime lastUpdate;
 
 	public DogPark() {
 		super();
@@ -54,6 +61,22 @@ public class DogPark {
 
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
+	}
+
+	public LocalDateTime getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(LocalDateTime createDate) {
+		this.createDate = createDate;
+	}
+
+	public LocalDateTime getLastUpdate() {
+		return lastUpdate;
+	}
+
+	public void setLastUpdate(LocalDateTime lastUpdate) {
+		this.lastUpdate = lastUpdate;
 	}
 
 	@Override
