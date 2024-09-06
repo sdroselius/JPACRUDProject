@@ -21,7 +21,7 @@
 | Multiplicative | *, /, % | Multiply,divide,remainder| L |num,num -> num|
 | Additive | +,- | Add,subtract | L |any,any -> num |
 | | + | String concatenation | L | str,any -> str |
-| Bitwise shift | <<,>>,>>> | Shift bits left/right | L | any -> num |
+| Bitwise shift | <<, >>, >>> | Shift bits left/right | L | any -> num |
 | Relational | <, <=, >, >= | Compare numeric/alpha order | L |any,any -> bool |
 | | instanceof | Test object class| L | obj,func -> bool|
 | | in | Test if property exists| L | str,obj -> bool|
