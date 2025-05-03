@@ -1,0 +1,3 @@
+rootProject.name = 'GoodBugs'
+
+includeFlat 'JPAGoodBugs'
