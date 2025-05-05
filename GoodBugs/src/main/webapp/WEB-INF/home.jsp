@@ -12,9 +12,9 @@
 </head>
 <body>
 
-<h1>Good Bugs!</h1>
 
 <main class="container">
+<h1>Good Bugs!</h1>
 <h5><a href="addBug.do">Tell us about another good bug!</a></h5>
 <hr>
 	<table class="table table-striped table-hover">
