@@ -15,10 +15,12 @@
 <h1>Good Bugs!</h1>
 
 <main class="container">
+<h5><a href="addBug.do">Tell us about another good bug!</a></h5>
+<hr>
 	<table class="table table-striped table-hover">
 		<thead class="table-dark"> 
 			<tr>
-				<th>Id</th>
+				<th>Image</th>
 				<th>Name</th>
 				<th>Scientific Name</th>
 			</tr>
@@ -27,7 +29,7 @@
 	
 		<c:forEach var="bug" items="${bugList}">
 			<tr>
-				<td>${buf.id}</td>
+				<td> <img src="${bug.imageUrl}" class="bugImageThumbnail"></td>
 				<td>
 					<a href="getBug.do?bugId=${bug.id}"> ${bug.name} </a>
 				</td>

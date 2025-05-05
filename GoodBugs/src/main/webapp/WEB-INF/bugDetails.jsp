@@ -28,7 +28,11 @@
 			<c:otherwise>
 				<h2>Say Hello to the ${bug.name } (${bug.scientificName })</h2>
 				<p><img alt="Picture of ${bug.name}" src="${bug.imageUrl}"></p>
-
+				<hr>
+				<p>${bug.description }</p>
+				<hr>
+				<a class="btn btn-primary" href="editBug.do?bugId=${bug.id}">Update</a>
+				<a class="btn btn-danger" href="deleteBug.do?bugId=${bug.id}">Delete</a>
 			</c:otherwise>
 		</c:choose>
 	</main>

@@ -28,4 +28,33 @@ public class InsectDaoImpl implements InsectDAO {
 		return em.createQuery(jpql, BeneficialInsect.class).getResultList();
 	}
 
+	@Override
+	public BeneficialInsect addBug(BeneficialInsect newBug) {
+		em.persist(newBug);
+		return newBug;
+	}
+
+	@Override
+	public BeneficialInsect updateBug(int bugId, BeneficialInsect updatingBug) {
+		BeneficialInsect managedBug = em.find(BeneficialInsect.class, bugId);
+		if (managedBug != null) {
+			managedBug.setName(updatingBug.getName());
+			managedBug.setScientificName(updatingBug.getScientificName());
+			managedBug.setDescription(updatingBug.getDescription());
+			managedBug.setImageUrl(updatingBug.getImageUrl());
+		}
+		return null;
+	}
+
+	@Override
+	public boolean deleteBug(int bugId) {
+		boolean deleted = false;
+		BeneficialInsect badBug = em.find(BeneficialInsect.class, bugId);
+		if (badBug != null) {
+			em.remove(badBug);
+			deleted = false;
+		}
+		return deleted;
+	}
+
 }
